@@ -25,12 +25,12 @@
 
 #include <time.h>
 #include <string.h>
-#endif
 
 // === auxiliar functions
 static inline char *timenow();
 
 #define _FILE strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__
+#define PRINTFUNCTION(format, ...)      fprintf(stderr, format, __VA_ARGS__)
 
 #define NO_LOG          0x00
 #define ERROR_LEVEL     0x01
