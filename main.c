@@ -24,7 +24,7 @@
 int main(int argc, char* argv[])
 {
     int socket_fd; // Hold id for socket file descriptor
-    int client_fd[MAX_CLIENTS] = { NULL };
+    int client_fd[MAX_CLIENTS] = { -1 };
     int opt_val; // Used for `const void* option_value` in setsockopt
     char buffer[BUFFER_LEN] = { 0 }; // Buffer for out data
     struct hostent* host;
@@ -69,7 +69,7 @@ int main(int argc, char* argv[])
     }
 
     read(client_fd[0], buffer, BUFFER_LEN);
-    printf("%s\n", buffer);
+    printf("Data: \n%s\n", buffer);
 
     return EXIT_SUCCESS;
 }
