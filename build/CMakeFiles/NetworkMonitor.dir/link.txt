@@ -1,0 +1,1 @@
+/usr/bin/arm-linux-gnueabihf-gcc-8    CMakeFiles/NetworkMonitor.dir/main.c.o  -o NetworkMonitor 
