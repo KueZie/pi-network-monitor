@@ -60,6 +60,7 @@ int main(int argc, char* argv[])
         return EXIT_FAILURE;
     }
 
+    LOG_DEBUG("Attempting to accept client connection!");
     client_fd[0] = accept(socket_fd, (struct sockaddr*)&addr, (socklen_t*)&addrlen);
 
     if (client_fd[0] < 0)
